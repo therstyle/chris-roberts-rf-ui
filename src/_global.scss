@@ -259,7 +259,13 @@ button {
     grid-row-gap: var(--space-1);
 
     &[class*='bg-'] {
-      padding: var(--space-2);
+      --padding: var(--space-2);
+
+      @media screen and (max-width: $mobile) {
+        --padding: var(--space-1);
+      }
+
+      padding: var(--padding);
 
       .card {
         color: inherit;
