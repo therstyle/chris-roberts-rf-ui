@@ -40,6 +40,29 @@ function App() {
     },
   ]);
 
+  const [step4, setStep4] = useState([
+    {
+      headline: 'Exhibitor Portal',
+      text: 'Manage the portal that attendees will see after they’ve register for your event.',
+    },
+    {
+      headline: 'Exhibitor Portal',
+      text: 'Manage the portal that attendees will see after they’ve register for your event.',
+    },
+    {
+      headline: 'Exhibitor Logos',
+      text: 'Manage the portal that attendees will see after they’ve register for your event.',
+    },
+    {
+      headline: 'Exhibitor Tasks',
+      text: 'Manage the portal that attendees will see after they’ve register for your event.',
+    },
+    {
+      headline: 'Exhibitor Forms',
+      text: 'Manage the portal that attendees will see after they’ve register for your event.',
+    },
+  ]);
+
   return (
     <main>
       <header className="header-main">
@@ -126,45 +149,12 @@ function App() {
             <h4>Build your exhibitor platform.</h4>
 
             <div className="card-grid bg-dark">
-              <Card>
-                <h5>Exhibitor Portal</h5>
-                <p>
-                  Manage the portal that attendees will see after they’ve
-                  register for your event.
-                </p>
-              </Card>
-
-              <Card>
-                <h5>Exhibitor Portal</h5>
-                <p>
-                  Manage the portal that attendees will see after they’ve
-                  register for your event.
-                </p>
-              </Card>
-
-              <Card>
-                <h5>Exhibitor Logos</h5>
-                <p>
-                  Manage the portal that attendees will see after they’ve
-                  register for your event.
-                </p>
-              </Card>
-
-              <Card>
-                <h5>Exhibitor Tasks</h5>
-                <p>
-                  Manage the portal that attendees will see after they’ve
-                  register for your event.
-                </p>
-              </Card>
-
-              <Card>
-                <h5>Exhibitor Forms</h5>
-                <p>
-                  Manage the portal that attendees will see after they’ve
-                  register for your event.
-                </p>
-              </Card>
+              {step4.map((step, index) => (
+                <Card key={index}>
+                  <h5>{step.headline}</h5>
+                  <p>{step.text}</p>
+                </Card>
+              ))}
             </div>
           </li>
         </ul>
