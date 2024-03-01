@@ -8,4 +8,8 @@ button.card {
   font-weight: 400;
   gap: var(--space-1);
   background: transparent;
+
+  &:hover {
+    background: var(--light-gray);
+  }
 }
