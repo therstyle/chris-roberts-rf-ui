@@ -1,3 +1,4 @@
+@import 'vars';
 @import 'mixins';
 
 body {
@@ -83,7 +84,14 @@ button {
 }
 
 .header-main {
+  --flex-direction: row;
+
+  @media screen and (max-width: $tablet) {
+    --flex-direction: column;
+  }
+
   display: flex;
+  flex-direction: var(--flex-direction);
   margin-block-end: var(--space-3);
   justify-content: space-between;
   gap: var(--space-1);
@@ -108,6 +116,12 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  &__edit {
+    display: flex;
+    justify-content: center;
+    align-items: start;
   }
 }
 
@@ -140,15 +154,33 @@ button {
 
       &.event-steps__step-4 {
         .card-grid {
-          grid-template-columns: repeat(6, 1fr);
+          --columns: 6;
+
+          @media screen and (max-width: $tablet) {
+            --columns: 1;
+          }
+
+          grid-template-columns: repeat(var(--columns), 1fr);
 
           > .card {
-            grid-column: span 2;
+            --column-width: 2;
+
+            @media screen and (max-width: $tablet) {
+              --column-width: 1;
+            }
+
+            grid-column: span var(--column-width);
           }
 
           >:nth-child(1),
           >:nth-child(2) {
-            grid-column: span 3;
+            --column-width: 3;
+
+            @media screen and (max-width: $tablet) {
+              --column-width: 1;
+            }
+
+            grid-column: span var(--column-width);
           }
         }
       }
@@ -185,21 +217,36 @@ button {
   }
 
   &-horz-description {
+    --cell-width: #{pxToRem(221)};
+    --flex-direction: row;
+
+    @media screen and (max-width: $tablet) {
+      --cell-width: 100%;
+      --flex-direction: column;
+    }
+
     display: flex;
+    flex-direction: var(--flex-direction);
     margin: 0;
     padding: 0;
     gap: var(--space-2);
 
     > li {
-      max-width: pxToRem(221);
+      max-width: var(--cell-width);
       margin: 0;
       list-style: none;
     }
   }
 
   &-grid {
+    --columns: 3;
+
+    @media screen and (max-width: $tablet) {
+      --columns: 1;
+    }
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--columns), 1fr);
     grid-auto-rows: minmax(pxToRem(122), auto);
     grid-column-gap: pxToRem(24);
     grid-row-gap: var(--space-1);

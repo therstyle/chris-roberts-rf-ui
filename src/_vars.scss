@@ -2,6 +2,7 @@
 
 //Sizes
 $mobile: 560px;
+$tablet: 768px;
 
 :root {
   --space-half: calc(var(--space-1) / 2);
@@ -12,7 +13,7 @@ $mobile: 560px;
   --max-container-width: #{pxToRem(1074)};
   --main-container-padding: var(--space-3);
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet) {
     --main-container-padding: var(--space-1);
   }
 }
