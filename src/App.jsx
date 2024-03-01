@@ -33,6 +33,13 @@ function App() {
     },
   ]);
 
+  const [step3, setStep3] = useState([
+    {
+      headline: 'Attendee Portal',
+      text: 'Manage the portal that attendees will see after they’ve register for your event.',
+    },
+  ]);
+
   return (
     <main>
       <header className="header-main">
@@ -106,13 +113,12 @@ function App() {
             <h4>Design attendee experiences.</h4>
 
             <div className="card-grid">
-              <Card>
-                <h5>Attendee Portal</h5>
-                <p>
-                  Manage the portal that attendees will see after they’ve
-                  register for your event.
-                </p>
-              </Card>
+              {step3.map((step, index) => (
+                <Card key={index}>
+                  <h5>{step.headline}</h5>
+                  <p>{step.text}</p>
+                </Card>
+              ))}
             </div>
           </li>
 
