@@ -14,7 +14,12 @@ main {
   padding: var(--main-container-padding);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-block-start: 0;
   font-weight: 600;
 }
@@ -62,7 +67,9 @@ button {
   border: none;
   border-radius: pxToRem(4);
   font-weight: bold;
-  transition: var(--transition-duration) background ease-in-out, var(--transition-duration) color ease-in-out;
+  transition:
+    var(--transition-duration) background ease-in-out,
+    var(--transition-duration) color ease-in-out;
 
   &:hover {
     cursor: pointer;
@@ -172,8 +179,8 @@ button {
             grid-column: span var(--column-width);
           }
 
-          >:nth-child(1),
-          >:nth-child(2) {
+          > :nth-child(1),
+          > :nth-child(2) {
             --column-width: 3;
 
             @media screen and (max-width: $tablet) {
@@ -251,7 +258,7 @@ button {
     grid-column-gap: pxToRem(24);
     grid-row-gap: var(--space-1);
 
-    &[class*="bg-"] {
+    &[class*='bg-'] {
       padding: var(--space-2);
 
       .card {

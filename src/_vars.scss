@@ -20,14 +20,14 @@ $tablet: 768px;
 
 //Fonts
 :root {
-  --main-font: "Inter", sans-serif;
+  --main-font: 'Inter', sans-serif;
 }
 
 //Colors
 $purple: #5c00dc;
 
 :root {
-  --white: #FFF;
+  --white: #fff;
   --black: #000;
   --purple: #{$purple};
   --dark-purple: #{darken($purple, 10%)};

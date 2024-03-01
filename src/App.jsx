@@ -1,7 +1,7 @@
 function App() {
   return (
     <main>
-      <header className={"header-main"}>
+      <header className="header-main">
         <div className="header-main__content">
           <div className="header-main__event-logo">
             <img src="/event-logo.svg" alt="Event Logo" />
