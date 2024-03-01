@@ -223,6 +223,10 @@ button {
   grid-column-gap: pxToRem(24);
   grid-row-gap: var(--space-1);
 
+  &:has(+ .card-grid) {
+    margin-block-end: var(--space-1);
+  }
+
   &[class*='bg-'] {
     --padding: var(--space-2);
 

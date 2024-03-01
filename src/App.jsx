@@ -63,6 +63,16 @@ function App() {
     },
   ]);
 
+  function onAddWorkflow() {
+    const clone = [...step2];
+    clone.push({
+      headline: 'Attendee Registration',
+      text: 'Start by creating a general registration workflow',
+    });
+
+    setStep2(clone);
+  }
+
   return (
     <main>
       <header className="header-main">
@@ -127,8 +137,12 @@ function App() {
                   <p>{step.text}</p>
                 </Card>
               ))}
+            </div>
 
-              <CardButton>Add Registration Workflow</CardButton>
+            <div className="card-grid">
+              <CardButton onAddWorkFlow={onAddWorkflow}>
+                Add Registration Workflow
+              </CardButton>
             </div>
           </li>
 

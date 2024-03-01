@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import '../_card-button.scss';
 
-function CardButton({ children }) {
+function CardButton({ children, onAddWorkFlow }) {
   return (
-    <button className="card" type="button">
+    <button onClick={onAddWorkFlow} className="card" type="button">
       <span className="card-body">{children}</span>
     </button>
   );
@@ -11,6 +11,7 @@ function CardButton({ children }) {
 
 CardButton.propTypes = {
   children: PropTypes.node,
+  onAddWorkFlow: PropTypes.func,
 };
 
 export default CardButton;
