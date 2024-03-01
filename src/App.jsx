@@ -18,6 +18,21 @@ function App() {
     },
   ]);
 
+  const [step2, setStep2] = useState([
+    {
+      headline: 'Attendee Registration',
+      text: 'Start by creating a general registration workflow',
+    },
+    {
+      headline: 'Attendee Registration',
+      text: 'Start by creating a general registration workflow',
+    },
+    {
+      headline: 'Attendee Registration',
+      text: 'Start by creating a general registration workflow',
+    },
+  ]);
+
   return (
     <main>
       <header className="header-main">
@@ -76,20 +91,12 @@ function App() {
             <h4>Build registration workflows.</h4>
 
             <div className="card-grid">
-              <Card>
-                <h5>Attendee Registration</h5>
-                <p>Start by creating a general registration workflow</p>
-              </Card>
-
-              <Card>
-                <h5>Attendee Registration</h5>
-                <p>Start by creating a general registration workflow</p>
-              </Card>
-
-              <Card>
-                <h5>Attendee Registration</h5>
-                <p>Start by creating a general registration workflow</p>
-              </Card>
+              {step2.map((step, index) => (
+                <Card key={index}>
+                  <h5>{step.headline}</h5>
+                  <p>{step.text}</p>
+                </Card>
+              ))}
 
               <CardButton>Add Registration Workflow</CardButton>
             </div>
