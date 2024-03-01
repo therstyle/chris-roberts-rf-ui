@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Card from './components/Card.jsx';
 import CardButton from './components/CardButton.jsx';
+import { ReactSVG } from 'react-svg';
 
 function App() {
   const [step1, setStep1] = useState([
@@ -22,14 +23,17 @@ function App() {
     {
       headline: 'Attendee Registration',
       text: 'Start by creating a general registration workflow',
+      icon: './icon-logic-arrow.svg',
     },
     {
       headline: 'Attendee Registration',
       text: 'Start by creating a general registration workflow',
+      icon: './icon-logic-arrow.svg',
     },
     {
       headline: 'Attendee Registration',
       text: 'Start by creating a general registration workflow',
+      icon: './icon-logic-arrow.svg',
     },
   ]);
 
@@ -37,6 +41,7 @@ function App() {
     {
       headline: 'Attendee Portal',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
+      icon: './icon-computer.svg',
     },
   ]);
 
@@ -44,22 +49,27 @@ function App() {
     {
       headline: 'Exhibitor Portal',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
+      icon: './icon-computer.svg',
     },
     {
       headline: 'Exhibitor Portal',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
+      icon: './icon-computer.svg',
     },
     {
       headline: 'Exhibitor Logos',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
+      icon: './icon-computer.svg',
     },
     {
       headline: 'Exhibitor Tasks',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
+      icon: './icon-computer.svg',
     },
     {
       headline: 'Exhibitor Forms',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
+      icon: './icon-computer.svg',
     },
   ]);
 
@@ -68,6 +78,7 @@ function App() {
     clone.push({
       headline: 'Attendee Registration',
       text: 'Start by creating a general registration workflow',
+      icon: './icon-logic-arrow.svg',
     });
 
     setStep2(clone);
@@ -133,7 +144,10 @@ function App() {
             <div className="card-grid">
               {step2.map((step, index) => (
                 <Card key={index}>
-                  <h5>{step.headline}</h5>
+                  <h5>
+                    <ReactSVG src={step.icon} />
+                    {step.headline}
+                  </h5>
                   <p>{step.text}</p>
                 </Card>
               ))}
@@ -141,6 +155,7 @@ function App() {
 
             <div className="card-grid">
               <CardButton onAddWorkFlow={onAddWorkflow}>
+                <ReactSVG src="./icon-plus.svg" />
                 Add Registration Workflow
               </CardButton>
             </div>
@@ -152,7 +167,10 @@ function App() {
             <div className="card-grid">
               {step3.map((step, index) => (
                 <Card key={index}>
-                  <h5>{step.headline}</h5>
+                  <h5>
+                    <ReactSVG src={step.icon} />
+                    {step.headline}
+                  </h5>
                   <p>{step.text}</p>
                 </Card>
               ))}
@@ -165,7 +183,10 @@ function App() {
             <div className="card-grid bg-dark">
               {step4.map((step, index) => (
                 <Card key={index}>
-                  <h5>{step.headline}</h5>
+                  <h5>
+                    <ReactSVG src={step.icon} />
+                    {step.headline}
+                  </h5>
                   <p>{step.text}</p>
                 </Card>
               ))}
