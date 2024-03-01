@@ -122,55 +122,50 @@ function App() {
             <div className="card-grid bg-dark">
               <div className="card">
                 <div className="card-body">
-                  <h5>Lorem imspum</h5>
+                  <h5>Exhibitor Portal</h5>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas tincidunt rhoncus odio, et eleifend enim ultricies
-                    sit amet.
+                    Manage the portal that attendees will see after they’ve
+                    register for your event.
                   </p>
                 </div>
               </div>
 
               <div className="card">
                 <div className="card-body">
-                  <h5>Lorem imspum</h5>
+                  <h5>Exhibitor Portal</h5>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas tincidunt rhoncus odio, et eleifend enim ultricies
-                    sit amet.
+                    Manage the portal that attendees will see after they’ve
+                    register for your event.
                   </p>
                 </div>
               </div>
 
               <div className="card">
                 <div className="card-body">
-                  <h5>Lorem imspum</h5>
+                  <h5>Exhibitor Logos</h5>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas tincidunt rhoncus odio, et eleifend enim ultricies
-                    sit amet.
+                    Manage the portal that attendees will see after they’ve
+                    register for your event.
                   </p>
                 </div>
               </div>
 
               <div className="card">
                 <div className="card-body">
-                  <h5>Lorem imspum</h5>
+                  <h5>Exhibitor Tasks</h5>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas tincidunt rhoncus odio, et eleifend enim ultricies
-                    sit amet.
+                    Manage the portal that attendees will see after they’ve
+                    register for your event.
                   </p>
                 </div>
               </div>
 
               <div className="card">
                 <div className="card-body">
-                  <h5>Lorem imspum</h5>
+                  <h5>Exhibitor Forms</h5>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas tincidunt rhoncus odio, et eleifend enim ultricies
-                    sit amet.
+                    Manage the portal that attendees will see after they’ve
+                    register for your event.
                   </p>
                 </div>
               </div>
