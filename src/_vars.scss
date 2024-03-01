@@ -1,0 +1,45 @@
+@import 'mixins';
+
+//Sizes
+$mobile: 560px;
+
+:root {
+  --space-half: calc(var(--space-1) / 2);
+  --space-1: #{pxToRem(16)};
+  --space-2: calc(var(--space-1) * 2);
+  --space-3: calc(var(--space-1) * 3);
+  --space-4: calc(var(--space-1) * 4);
+  --max-container-width: #{pxToRem(1074)};
+  --main-container-padding: var(--space-3);
+
+  @media screen and (max-width: $mobile) {
+    --main-container-padding: var(--space-1);
+  }
+}
+
+//Fonts
+:root {
+  --main-font: "Inter", sans-serif;
+}
+
+//Colors
+$purple: #5c00dc;
+
+:root {
+  --white: #FFF;
+  --black: #000;
+  --purple: #{$purple};
+  --dark-purple: #{darken($purple, 10%)};
+  --gray: #444;
+  --gray-alt: #222;
+  --light-gray: #cccccc;
+  --dark-gray: #393551;
+  --accent-color: var(--purple);
+  --accent-hover-color: var(--dark-purple);
+  --border-color: var(--light-gray);
+}
+
+//Misc
+:root {
+  --transition-duration: 0.2s;
+}
