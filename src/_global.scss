@@ -211,7 +211,6 @@ button {
 }
 
 .card-grid {
-
   --columns: 3;
 
   @media screen and (max-width: $tablet) {
@@ -237,13 +236,4 @@ button {
       color: inherit;
     }
   }
-}
-
-button.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-  gap: var(--space-1);
-  background: transparent;
 }

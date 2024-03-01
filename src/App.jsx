@@ -1,4 +1,5 @@
 import Card from './components/Card.jsx';
+import CardButton from './components/CardButton.jsx';
 
 function App() {
   return (
@@ -88,9 +89,7 @@ function App() {
                 <p>Start by creating a general registration workflow</p>
               </Card>
 
-              <button className="card">
-                <span className="card-body">Add Registration Workflow</span>
-              </button>
+              <CardButton>Add Registration Workflow</CardButton>
             </div>
           </li>
 
