@@ -1,3 +1,5 @@
+import Card from './components/Card.jsx';
+
 function App() {
   return (
     <main>
@@ -41,58 +43,50 @@ function App() {
           <li className="event-steps__step-1">
             <h4>Base settings.</h4>
 
-            <div className="card">
-              <div className="card-body">
-                <ul className="card-horz-description">
-                  <li>
-                    <h5>General</h5>
-                    <p>Define Attendee types & attributes</p>
-                  </li>
+            <Card>
+              <ul className="card-horz-description">
+                <li>
+                  <h5>General</h5>
+                  <p>Define Attendee types & attributes</p>
+                </li>
 
-                  <li>
-                    <h5>Title</h5>
-                    <p>
-                      Description that explains the value goes here. Description
-                      that explains the value goes here.
-                    </p>
-                  </li>
+                <li>
+                  <h5>Title</h5>
+                  <p>
+                    Description that explains the value goes here. Description
+                    that explains the value goes here.
+                  </p>
+                </li>
 
-                  <li>
-                    <h5>Title</h5>
-                    <p>
-                      Description that explains the value goes here. Description
-                      that explains the value goes here.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+                <li>
+                  <h5>Title</h5>
+                  <p>
+                    Description that explains the value goes here. Description
+                    that explains the value goes here.
+                  </p>
+                </li>
+              </ul>
+            </Card>
           </li>
 
           <li className="event-steps__step-2">
             <h4>Build registration workflows.</h4>
 
             <div className="card-grid">
-              <div className="card">
-                <div className="card-body">
-                  <h5>Attendee Registration</h5>
-                  <p>Start by creating a general registration workflow</p>
-                </div>
-              </div>
+              <Card>
+                <h5>Attendee Registration</h5>
+                <p>Start by creating a general registration workflow</p>
+              </Card>
 
-              <div className="card">
-                <div className="card-body">
-                  <h5>Attendee Registration</h5>
-                  <p>Start by creating a general registration workflow</p>
-                </div>
-              </div>
+              <Card>
+                <h5>Attendee Registration</h5>
+                <p>Start by creating a general registration workflow</p>
+              </Card>
 
-              <div className="card">
-                <div className="card-body">
-                  <h5>Attendee Registration</h5>
-                  <p>Start by creating a general registration workflow</p>
-                </div>
-              </div>
+              <Card>
+                <h5>Attendee Registration</h5>
+                <p>Start by creating a general registration workflow</p>
+              </Card>
 
               <button className="card">
                 <span className="card-body">Add Registration Workflow</span>
@@ -104,15 +98,13 @@ function App() {
             <h4>Design attendee experiences.</h4>
 
             <div className="card-grid">
-              <div className="card">
-                <div className="card-body">
-                  <h5>Attendee Portal</h5>
-                  <p>
-                    Manage the portal that attendees will see after they’ve
-                    register for your event.
-                  </p>
-                </div>
-              </div>
+              <Card>
+                <h5>Attendee Portal</h5>
+                <p>
+                  Manage the portal that attendees will see after they’ve
+                  register for your event.
+                </p>
+              </Card>
             </div>
           </li>
 
@@ -120,55 +112,45 @@ function App() {
             <h4>Build your exhibitor platform.</h4>
 
             <div className="card-grid bg-dark">
-              <div className="card">
-                <div className="card-body">
-                  <h5>Exhibitor Portal</h5>
-                  <p>
-                    Manage the portal that attendees will see after they’ve
-                    register for your event.
-                  </p>
-                </div>
-              </div>
+              <Card>
+                <h5>Exhibitor Portal</h5>
+                <p>
+                  Manage the portal that attendees will see after they’ve
+                  register for your event.
+                </p>
+              </Card>
 
-              <div className="card">
-                <div className="card-body">
-                  <h5>Exhibitor Portal</h5>
-                  <p>
-                    Manage the portal that attendees will see after they’ve
-                    register for your event.
-                  </p>
-                </div>
-              </div>
+              <Card>
+                <h5>Exhibitor Portal</h5>
+                <p>
+                  Manage the portal that attendees will see after they’ve
+                  register for your event.
+                </p>
+              </Card>
 
-              <div className="card">
-                <div className="card-body">
-                  <h5>Exhibitor Logos</h5>
-                  <p>
-                    Manage the portal that attendees will see after they’ve
-                    register for your event.
-                  </p>
-                </div>
-              </div>
+              <Card>
+                <h5>Exhibitor Logos</h5>
+                <p>
+                  Manage the portal that attendees will see after they’ve
+                  register for your event.
+                </p>
+              </Card>
 
-              <div className="card">
-                <div className="card-body">
-                  <h5>Exhibitor Tasks</h5>
-                  <p>
-                    Manage the portal that attendees will see after they’ve
-                    register for your event.
-                  </p>
-                </div>
-              </div>
+              <Card>
+                <h5>Exhibitor Tasks</h5>
+                <p>
+                  Manage the portal that attendees will see after they’ve
+                  register for your event.
+                </p>
+              </Card>
 
-              <div className="card">
-                <div className="card-body">
-                  <h5>Exhibitor Forms</h5>
-                  <p>
-                    Manage the portal that attendees will see after they’ve
-                    register for your event.
-                  </p>
-                </div>
-              </div>
+              <Card>
+                <h5>Exhibitor Forms</h5>
+                <p>
+                  Manage the portal that attendees will see after they’ve
+                  register for your event.
+                </p>
+              </Card>
             </div>
           </li>
         </ul>
