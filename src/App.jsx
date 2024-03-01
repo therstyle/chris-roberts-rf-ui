@@ -1,7 +1,23 @@
+import { useState } from 'react';
 import Card from './components/Card.jsx';
 import CardButton from './components/CardButton.jsx';
 
 function App() {
+  const [step1, setStep1] = useState([
+    {
+      headline: 'General',
+      text: 'Define Attendee types & attributes',
+    },
+    {
+      headline: 'Title',
+      text: 'Description that explains the value goes here. Description that explains the value goes here.',
+    },
+    {
+      headline: 'Title',
+      text: 'Description that explains the value goes here. Description that explains the value goes here.',
+    },
+  ]);
+
   return (
     <main>
       <header className="header-main">
@@ -46,26 +62,12 @@ function App() {
 
             <Card>
               <ul className="card-horz-description">
-                <li>
-                  <h5>General</h5>
-                  <p>Define Attendee types & attributes</p>
-                </li>
-
-                <li>
-                  <h5>Title</h5>
-                  <p>
-                    Description that explains the value goes here. Description
-                    that explains the value goes here.
-                  </p>
-                </li>
-
-                <li>
-                  <h5>Title</h5>
-                  <p>
-                    Description that explains the value goes here. Description
-                    that explains the value goes here.
-                  </p>
-                </li>
+                {step1.map((step, index) => (
+                  <li key={index}>
+                    <h5>{step.headline}</h5>
+                    <p>{step.text}</p>
+                  </li>
+                ))}
               </ul>
             </Card>
           </li>
