@@ -101,6 +101,7 @@ function App() {
               width="89"
               height="89"
               alt="Event Logo"
+              loading="lazy"
             />
           </div>
 
@@ -131,7 +132,13 @@ function App() {
       </section>
 
       <h3 className="org-settings">
-        <img src="/icon-org.svg" width="35" height="35" alt="Org Settings" />
+        <img
+          src="/icon-org.svg"
+          width="35"
+          height="35"
+          alt="Org Settings"
+          loading="lazy"
+        />
         Org Settings
       </h3>
 
