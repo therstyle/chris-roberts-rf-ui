@@ -25,6 +25,7 @@ $tablet: 768px;
 
 //Colors
 $purple: #5c00dc;
+$light-gray: #ccc;
 
 :root {
   --white: #fff;
@@ -34,7 +35,8 @@ $purple: #5c00dc;
   --dark-purple: #{darken($purple, 10%)};
   --gray: #444;
   --gray-alt: #222;
-  --light-gray: #cccccc;
+  --light-gray: #{$light-gray};
+  --light-gray-alt: #{lighten($light-gray, 15%)};
   --dark-gray: #393551;
   --dark-gray-alt: #333;
   --body-color: var(--white);
