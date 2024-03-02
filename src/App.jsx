@@ -150,7 +150,7 @@ function App() {
           <li className="event-steps__step-2">
             <h4>Build registration workflows.</h4>
 
-            <div className="card-grid">
+            <div className="event-steps__card-grid">
               {step2.map((step, index) => (
                 <Card key={index}>
                   <h5>
@@ -162,7 +162,7 @@ function App() {
               ))}
             </div>
 
-            <div className="card-grid">
+            <div className="event-steps__card-grid">
               <CardButton onAddWorkFlow={onAddWorkflow}>
                 <ReactSVG src="./icon-plus.svg" />
                 Add Registration Workflow
@@ -173,7 +173,7 @@ function App() {
           <li className="event-steps__step-3">
             <h4>Design attendee experiences.</h4>
 
-            <div className="card-grid">
+            <div className="event-steps__card-grid">
               {step3.map((step, index) => (
                 <Card key={index}>
                   <h5>
@@ -189,7 +189,7 @@ function App() {
           <li className="event-steps__step-4">
             <h4>Build your exhibitor platform.</h4>
 
-            <div className="card-grid bg-dark">
+            <div className="event-steps__card-grid bg-dark">
               {step4.map((step, index) => (
                 <Card key={index}>
                   <h5>
