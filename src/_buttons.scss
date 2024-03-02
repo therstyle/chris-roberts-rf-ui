@@ -1,0 +1,22 @@
+button {
+  padding: pxToRem(9) var(--space-1);
+  border: none;
+  border-radius: pxToRem(4);
+  font-weight: bold;
+  transition:
+    var(--transition-duration) background ease-in-out,
+    var(--transition-duration) color ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    background: var(--accent-color);
+    color: var(--white);
+
+    &:hover {
+      background: var(--dark-purple);
+    }
+  }
+}

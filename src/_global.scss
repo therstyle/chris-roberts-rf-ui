@@ -3,10 +3,7 @@
 
 body {
   background: var(--body-color);
-  font-family: var(--main-font);
-  font-size: pxToRem(16);
   margin: 0;
-  color: var(--text-color);
 }
 
 main {
@@ -15,81 +12,8 @@ main {
   padding: var(--main-container-padding);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-block-start: 0;
-  font-weight: 600;
-}
-
-h1 {
-  line-height: 1;
-  margin-block-end: var(--space-1);
-  font-weight: 600;
-  font-size: pxToRem(32);
-}
-
-h2 {
-  font-size: pxToRem(24);
-}
-
-h3 {
-  font-size: pxToRem(20);
-}
-
-h4 {
-  --color: var(--gray-alt);
-
-  @media (prefers-color-scheme: dark) {
-    --color: var(--white);
-  }
-
-  font-size: pxToRem(14);
-  color: var(--color);
-  font-weight: 400;
-}
-
-h5 {
-  font-size: pxToRem(13);
-  margin-block-end: pxToRem(4);
-}
-
-p {
-  margin-block-start: 0;
-
-  &:last-child {
-    margin-block-end: 0;
-  }
-}
-
 img {
   max-width: 100%;
-}
-
-button {
-  padding: pxToRem(9) var(--space-1);
-  border: none;
-  border-radius: pxToRem(4);
-  font-weight: bold;
-  transition:
-    var(--transition-duration) background ease-in-out,
-    var(--transition-duration) color ease-in-out;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &.primary {
-    background: var(--accent-color);
-    color: var(--white);
-
-    &:hover {
-      background: var(--dark-purple);
-    }
-  }
 }
 
 .bg-dark {
