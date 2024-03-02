@@ -30,14 +30,28 @@ $purple: #5c00dc;
   --white: #fff;
   --black: #000;
   --purple: #{$purple};
+  --light-purple: #{lighten($purple, 20%)};
   --dark-purple: #{darken($purple, 10%)};
   --gray: #444;
   --gray-alt: #222;
   --light-gray: #cccccc;
   --dark-gray: #393551;
+  --dark-gray-alt: #333;
+  --body-color: var(--white);
   --accent-color: var(--purple);
   --accent-hover-color: var(--dark-purple);
   --border-color: var(--light-gray);
+  --text-color: var(--black);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-color: var(--dark-gray-alt);
+    --accent-color: var(--light-purple);
+    --accent-hover-color: var(--purple);
+    --border-color: var(--light-gray);
+    --text-color: var(--white);
+  }
 }
 
 //Misc

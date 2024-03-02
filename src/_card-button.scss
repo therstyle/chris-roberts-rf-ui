@@ -9,6 +9,12 @@ button.card {
   gap: var(--space-1);
   background: transparent;
 
+  path {
+    @media (prefers-color-scheme: dark) {
+      fill: var(--light-purple);
+    }
+  }
+
   &:hover {
     background: var(--light-gray);
   }
