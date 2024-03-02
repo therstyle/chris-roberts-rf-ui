@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { ReactSVG } from 'react-svg';
 import Card from './components/Card.jsx';
 import CardButton from './components/CardButton.jsx';
-import { ReactSVG } from 'react-svg';
 import './event.scss';
 
 function App() {
