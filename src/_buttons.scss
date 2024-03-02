@@ -1,3 +1,5 @@
+@import 'vars.scss';
+
 button {
   padding: pxToRem(9) var(--space-1);
   border: none;
