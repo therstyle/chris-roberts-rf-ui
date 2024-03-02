@@ -44,6 +44,7 @@ $purple: #5c00dc;
   --text-color: var(--black);
 }
 
+//Dark Mode
 @media (prefers-color-scheme: dark) {
   :root {
     --body-color: var(--dark-gray-alt);
