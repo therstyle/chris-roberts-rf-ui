@@ -96,7 +96,12 @@ function App() {
       <header className="header-main">
         <div className="header-main__content">
           <div className="header-main__event-logo">
-            <img src="/event-logo.svg" alt="Event Logo" />
+            <img
+              src="/event-logo.svg"
+              width="89"
+              height="89"
+              alt="Event Logo"
+            />
           </div>
 
           <div className="header-main__event-details">
@@ -126,7 +131,7 @@ function App() {
       </section>
 
       <h3 className="org-settings">
-        <img src="/icon-org.svg" alt="Org Settings" />
+        <img src="/icon-org.svg" width="35" height="35" alt="Org Settings" />
         Org Settings
       </h3>
 
