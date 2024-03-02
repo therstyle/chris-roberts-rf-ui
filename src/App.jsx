@@ -4,6 +4,8 @@ import CardButton from './components/CardButton.jsx';
 import { ReactSVG } from 'react-svg';
 
 function App() {
+  const [isEditing, setIsEditing] = useState(false);
+
   const [step1] = useState([
     {
       headline: 'General',
@@ -84,6 +86,10 @@ function App() {
     setStep2(clone);
   }
 
+  function toggleEditing() {
+    setIsEditing(!isEditing);
+  }
+
   return (
     <main>
       <header className="header-main">
@@ -104,7 +110,9 @@ function App() {
         </div>
 
         <div className="header-main__edit">
-          <button className="primary">Edit event</button>
+          <button className="primary" onClick={toggleEditing}>
+            Edit event
+          </button>
         </div>
       </header>
 
