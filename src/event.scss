@@ -22,43 +22,9 @@
     > li {
       list-style: none;
       counter-increment: event-steps;
-      margin-block-end: var(--space-1);
 
-      &.event-steps__step-3 {
-        margin-block-end: var(--space-2);
-      }
-
-      &.event-steps__step-4 {
-        .event-steps__card-grid {
-          --columns: 6;
-
-          @media screen and (max-width: $tablet) {
-            --columns: 1;
-          }
-
-          grid-template-columns: repeat(var(--columns), 1fr);
-
-          > .card {
-            --column-width: 2;
-
-            @media screen and (max-width: $tablet) {
-              --column-width: 1;
-            }
-
-            grid-column: span var(--column-width);
-          }
-
-          > :nth-child(1),
-          > :nth-child(2) {
-            --column-width: 3;
-
-            @media screen and (max-width: $tablet) {
-              --column-width: 1;
-            }
-
-            grid-column: span var(--column-width);
-          }
-        }
+      &:not(.event-steps__step-3) {
+        margin-block-end: var(--space-1);
       }
 
       &:last-child {
@@ -74,6 +40,43 @@
           content: 'Step ' counter(event-steps) ':';
           font-weight: 700;
         }
+      }
+    }
+  }
+
+  &__step-3 {
+    margin-block-end: var(--space-2);
+  }
+
+  &__step-4 {
+    .event-steps__card-grid {
+      --columns: 6;
+
+      @media screen and (max-width: $tablet) {
+        --columns: 1;
+      }
+
+      grid-template-columns: repeat(var(--columns), 1fr);
+
+      > .card {
+        --column-width: 2;
+
+        @media screen and (max-width: $tablet) {
+          --column-width: 1;
+        }
+
+        grid-column: span var(--column-width);
+      }
+
+      > :nth-child(1),
+      > :nth-child(2) {
+        --column-width: 3;
+
+        @media screen and (max-width: $tablet) {
+          --column-width: 1;
+        }
+
+        grid-column: span var(--column-width);
       }
     }
   }
