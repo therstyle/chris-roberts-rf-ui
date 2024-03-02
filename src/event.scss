@@ -23,7 +23,7 @@
       counter-increment: event-steps;
 
       &:not(.event-steps__step-3) {
-        margin-block-end: var(--space-1);
+        margin-block-end: pxToRem(24);
       }
 
       &:last-child {
@@ -44,7 +44,7 @@
   }
 
   &__step-3 {
-    margin-block-end: var(--space-2);
+    margin-block-end: pxToRem(36);
   }
 
   &__step-4 {
