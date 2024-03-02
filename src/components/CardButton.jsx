@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../_card-button.scss';
+import '../_cards.scss';
 
 function CardButton({ children, onAddWorkFlow }) {
   return (
