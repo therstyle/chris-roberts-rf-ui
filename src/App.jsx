@@ -135,7 +135,7 @@ function App() {
             <h4>Base settings.</h4>
 
             <Card>
-              <ul className="card-horz-description">
+              <ul className="card__horz-description">
                 {step1.map((step, index) => (
                   <li key={index}>
                     <h5>{step.headline}</h5>

@@ -24,7 +24,7 @@
     }
   }
 
-  &-body {
+  &__body {
     --padding: var(--space-2);
 
     @media screen and (max-width: $mobile) {
@@ -37,7 +37,7 @@
     display: block;
   }
 
-  &-horz-description {
+  &__horz-description {
     --cell-width: #{pxToRem(221)};
     --flex-direction: row;
 

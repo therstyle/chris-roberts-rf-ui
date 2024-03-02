@@ -4,7 +4,7 @@ import '../_cards.scss';
 function CardButton({ children, onAddWorkFlow }) {
   return (
     <button onClick={onAddWorkFlow} className="card" type="button">
-      <span className="card-body">{children}</span>
+      <span className="card__body">{children}</span>
     </button>
   );
 }

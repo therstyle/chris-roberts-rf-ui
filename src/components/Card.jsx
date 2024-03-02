@@ -4,7 +4,7 @@ import '../_cards.scss';
 function Card({ children }) {
   return (
     <div className="card">
-      <div className="card-body">{children}</div>
+      <div className="card__body">{children}</div>
     </div>
   );
 }
