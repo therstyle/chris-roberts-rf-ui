@@ -4,7 +4,7 @@ import CardButton from './components/CardButton.jsx';
 import { ReactSVG } from 'react-svg';
 
 function App() {
-  const [step1, setStep1] = useState([
+  const [step1] = useState([
     {
       headline: 'General',
       text: 'Define Attendee types & attributes',
@@ -37,7 +37,7 @@ function App() {
     },
   ]);
 
-  const [step3, setStep3] = useState([
+  const [step3] = useState([
     {
       headline: 'Attendee Portal',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
@@ -45,7 +45,7 @@ function App() {
     },
   ]);
 
-  const [step4, setStep4] = useState([
+  const [step4] = useState([
     {
       headline: 'Exhibitor Portal',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
