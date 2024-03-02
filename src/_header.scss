@@ -1,0 +1,44 @@
+@import 'vars';
+@import 'mixins';
+
+.header-main {
+  --flex-direction: row;
+
+  @media screen and (max-width: $tablet) {
+    --flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: var(--flex-direction);
+  margin-block-end: var(--space-3);
+  justify-content: space-between;
+  gap: var(--space-1);
+
+  h1 {
+    margin-block-end: pxToRem(12);
+  }
+
+  &__content {
+    display: flex;
+    gap: var(--space-1);
+  }
+
+  &__event-logo {
+    img {
+      border-radius: pxToRem(8);
+      display: block;
+    }
+  }
+
+  &__event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__edit {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+}

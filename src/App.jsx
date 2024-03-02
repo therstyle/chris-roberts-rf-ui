@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Card from './components/Card.jsx';
 import CardButton from './components/CardButton.jsx';
 import { ReactSVG } from 'react-svg';
+import './event.scss';
 
 function App() {
   const [isEditing, setIsEditing] = useState(false);
