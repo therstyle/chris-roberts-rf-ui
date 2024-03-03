@@ -55,7 +55,7 @@ function App() {
       icon: './icon-computer.svg',
     },
     {
-      headline: 'Exhibitor Portal',
+      headline: 'Exhibitor List',
       text: 'Manage the portal that attendees will see after they’ve register for your event.',
       icon: './icon-computer.svg',
     },
