@@ -76,26 +76,6 @@ function App() {
     },
   ]);
 
-  const selectOptions = [
-    {
-      value: 1,
-      text: 'Sample 1',
-    },
-    {
-      value: 2,
-      text: 'Sample 2',
-    },
-    {
-      value: 3,
-      text: 'Sample 3',
-    },
-  ];
-
-  const [selectedOption, setSelectedOption] = useState(1);
-  function selectedHandler(e) {
-    setSelectedOption(e.target.value);
-  }
-
   function onAddWorkflow() {
     const clone = [...step2];
     clone.push({
@@ -142,16 +122,6 @@ function App() {
           </button>
         </div>
       </header>
-
-      <div className="select-wrapper">
-        <select value={selectedOption} onChange={selectedHandler}>
-          {selectOptions.map((option, index) => (
-            <option key={index} value={option.value}>
-              {option.text}
-            </option>
-          ))}
-        </select>
-      </div>
 
       <section className="event-setup">
         <h2>Event setup guide</h2>
