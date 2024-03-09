@@ -118,3 +118,15 @@
     }
   }
 }
+
+.select-wrapper {
+  background: var(--gray);
+  margin-inline: auto;
+  width: min(100%, pxToRem(600));
+  margin-block-end: var(--space-2);
+  padding: pxToRem(8);
+
+  select {
+    width: 100%;
+  }
+}

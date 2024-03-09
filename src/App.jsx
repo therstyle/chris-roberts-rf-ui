@@ -143,13 +143,15 @@ function App() {
         </div>
       </header>
 
-      <select value={selectedOption} onChange={selectedHandler}>
-        {selectOptions.map((option, index) => (
-          <option key={index} value={option.value}>
-            {option.text}
-          </option>
-        ))}
-      </select>
+      <div className="select-wrapper">
+        <select value={selectedOption} onChange={selectedHandler}>
+          {selectOptions.map((option, index) => (
+            <option key={index} value={option.value}>
+              {option.text}
+            </option>
+          ))}
+        </select>
+      </div>
 
       <section className="event-setup">
         <h2>Event setup guide</h2>
