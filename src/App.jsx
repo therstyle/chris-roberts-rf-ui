@@ -87,6 +87,11 @@ function App() {
     setStep2(clone);
   }
 
+  function removeWorkflow(count) {
+    const filteredView = step2.filter((step, index) => index !== count);
+    setStep2(filteredView);
+  }
+
   function toggleEditing() {
     setIsEditing(!isEditing);
   }
@@ -165,7 +170,11 @@ function App() {
 
               <div className="event-steps__card-grid">
                 {step2.map((step, index) => (
-                  <Card key={index}>
+                  <Card
+                    key={index}
+                    onClick={() => removeWorkflow(index)}
+                    count={index}
+                  >
                     <h5>
                       <ReactSVG src={step.icon} />
                       {step.headline}
