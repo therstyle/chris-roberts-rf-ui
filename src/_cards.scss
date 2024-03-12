@@ -16,11 +16,11 @@
     display: flex;
     align-items: center;
     gap: var(--space-half);
+  }
 
+  svg {
     path {
-      @media (prefers-color-scheme: dark) {
-        fill: var(--light-purple);
-      }
+      fill: var(--accent-color);
     }
   }
 
@@ -68,12 +68,6 @@ button.card {
   font-weight: 400;
   gap: var(--space-1);
   background: transparent;
-
-  path {
-    @media (prefers-color-scheme: dark) {
-      fill: var(--light-purple);
-    }
-  }
 
   &:hover {
     background: var(--light-gray-alt);

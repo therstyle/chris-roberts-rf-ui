@@ -87,12 +87,17 @@ function App() {
     setStep2(clone);
   }
 
+  function removeWorkflow(count) {
+    const filteredView = step2.filter((step, index) => index !== count);
+    setStep2(filteredView);
+  }
+
   function toggleEditing() {
     setIsEditing(!isEditing);
   }
 
   return (
-    <main>
+    <div className="main-container">
       <header className="header-main">
         <div className="header-main__content">
           <div className="header-main__event-logo">
@@ -123,99 +128,105 @@ function App() {
         </div>
       </header>
 
-      <section className="event-setup">
-        <h2>Event setup guide</h2>
-        <p>
-          See the available list of modules below. We suggest that you start
-          with the attendee module.
-        </p>
-      </section>
+      <main>
+        <section className="event-setup">
+          <h2>Event setup guide</h2>
+          <p>
+            See the available list of modules below. We suggest that you start
+            with the attendee module.
+          </p>
+        </section>
 
-      <h3 className="org-settings">
-        <img
-          src="/icon-org.svg"
-          width="35"
-          height="35"
-          alt="Org Settings"
-          loading="lazy"
-        />
-        Org Settings
-      </h3>
+        <h3 className="org-settings">
+          <img
+            src="/icon-org.svg"
+            width="35"
+            height="35"
+            alt="Org Settings"
+            loading="lazy"
+          />
+          Org Settings
+        </h3>
 
-      <section className="event-steps">
-        <ul>
-          <li className="event-steps__step-1">
-            <h4>Base settings.</h4>
+        <section className="event-steps">
+          <ul>
+            <li className="event-steps__step-1">
+              <h4>Base settings.</h4>
 
-            <Card>
-              <ul className="card__horz-description">
-                {step1.map((step, index) => (
-                  <li key={index}>
-                    <h5>{step.headline}</h5>
+              <Card>
+                <ul className="card__horz-description">
+                  {step1.map((step, index) => (
+                    <li key={index}>
+                      <h5>{step.headline}</h5>
+                      <p>{step.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </li>
+
+            <li className="event-steps__step-2">
+              <h4>Build registration workflows.</h4>
+
+              <div className="event-steps__card-grid">
+                {step2.map((step, index) => (
+                  <Card
+                    key={index}
+                    onClick={() => removeWorkflow(index)}
+                    count={index}
+                  >
+                    <h5>
+                      <ReactSVG src={step.icon} />
+                      {step.headline}
+                    </h5>
                     <p>{step.text}</p>
-                  </li>
+                  </Card>
                 ))}
-              </ul>
-            </Card>
-          </li>
+              </div>
 
-          <li className="event-steps__step-2">
-            <h4>Build registration workflows.</h4>
+              <div className="event-steps__card-grid">
+                <CardButton onAddWorkFlow={onAddWorkflow}>
+                  <ReactSVG src="./icon-plus.svg" />
+                  Add Registration Workflow
+                </CardButton>
+              </div>
+            </li>
 
-            <div className="event-steps__card-grid">
-              {step2.map((step, index) => (
-                <Card key={index}>
-                  <h5>
-                    <ReactSVG src={step.icon} />
-                    {step.headline}
-                  </h5>
-                  <p>{step.text}</p>
-                </Card>
-              ))}
-            </div>
+            <li className="event-steps__step-3">
+              <h4>Design attendee experiences.</h4>
 
-            <div className="event-steps__card-grid">
-              <CardButton onAddWorkFlow={onAddWorkflow}>
-                <ReactSVG src="./icon-plus.svg" />
-                Add Registration Workflow
-              </CardButton>
-            </div>
-          </li>
+              <div className="event-steps__card-grid">
+                {step3.map((step, index) => (
+                  <Card key={index}>
+                    <h5>
+                      <ReactSVG src={step.icon} />
+                      {step.headline}
+                    </h5>
+                    <p>{step.text}</p>
+                  </Card>
+                ))}
+              </div>
+            </li>
 
-          <li className="event-steps__step-3">
-            <h4>Design attendee experiences.</h4>
+            <li className="event-steps__step-4">
+              <h4>Build your exhibitor platform.</h4>
 
-            <div className="event-steps__card-grid">
-              {step3.map((step, index) => (
-                <Card key={index}>
-                  <h5>
-                    <ReactSVG src={step.icon} />
-                    {step.headline}
-                  </h5>
-                  <p>{step.text}</p>
-                </Card>
-              ))}
-            </div>
-          </li>
-
-          <li className="event-steps__step-4">
-            <h4>Build your exhibitor platform.</h4>
-
-            <div className="event-steps__card-grid bg-dark">
-              {step4.map((step, index) => (
-                <Card key={index}>
-                  <h5>
-                    <ReactSVG src={step.icon} />
-                    {step.headline}
-                  </h5>
-                  <p>{step.text}</p>
-                </Card>
-              ))}
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+              <div className="event-steps__card-grid bg-dark">
+                {step4.map((step, index) => (
+                  <Card key={index}>
+                    <h5>
+                      <ReactSVG src={step.icon} />
+                      {step.headline}
+                    </h5>
+                    <p>{step.text}</p>
+                  </Card>
+                ))}
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
   );
 }
 
